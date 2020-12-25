@@ -8,9 +8,19 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', async () => {
-    await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('student-mgmt-app app is running!');
+  it('should display Title message', async () => {
+    await page.navigateToChart();
+    expect(await page.getTitleText()).toEqual('Student Management');
+  });
+
+
+  it('should make record editable', async () => {
+
+    await page.navigateToList();
+
+    (await page.getEditButton()).click();
+    (await page.getNameCell()).clear();
+    (await page.getNameCell()).sendKeys("vikas Kumar singh");
   });
 
   afterEach(async () => {
