@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_vikaskumars_student_mgmt_app_1705930281839-pr-trigger-input-set
+  identifier: Build_vikaskumars_student_mgmt_app_1705930281839prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_vikaskumars_student_mgmt_app_1705930281839
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
